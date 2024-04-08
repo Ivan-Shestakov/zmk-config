@@ -19,6 +19,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: lily58_left
+    shield: dm_4x5_left
   - board: nice_nano_v2
-    shield: lily58_right
+    shield: dm_4x5_right
