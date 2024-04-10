@@ -2,6 +2,11 @@
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
+ *
+ * A multi layered, COLEMAK based keymap, for handwired Dactyl-Manuform keyboard, without bells and whistles
+ * No OLED displays, backlight/per-key LEDs, fancy encoders etc.
+ * Heavily inspired by Extend layer by DreymaR https://dreymar.colemak.org/ , and uses home row mods https://precondition.github.io/home-row-mods.
+ *
  */
 
 #include <behaviors.dtsi>
@@ -60,11 +65,11 @@
 
 			bindings = <   
 &kp        Q  &kp      W  &kp       F      &kp P &kp G                      &kp J       &kp L       &kp U      &kp Y   &kp APOS     
-&mt LSHIFT A  &mt LALT R  &mt LCTRL S &mt LGUI T &kp D                      &kp H  &mt RGUI N &mt RCTRL E &mt RALT I &mt RSHIFT O  
-&mt LSHIFT Z  &kp      X  &kp       C      &kp V &kp B                      &kp K       &kp M &kp COMMA &kp DOT &mt RSHIFT FSLH
-       &kp LALT &kp LWIN  &lt SYM SPACE &mt LSHIFT ENTER     &mt RSHIFT BSPC  &mt SYM DEL      &kp INS &kp SEMI
+&mt LSHIFT A  &mt LALT R  &mt LCTRL S &mt LGUI T &kp D                      &kp H  &mt RGUI N &mt RCTRL E &mt RALT I   &mt RSHIFT O  
+&mt LSHIFT Z  &kp      X  &kp       C      &kp V &kp B                      &kp K       &kp M &kp COMMA       &kp DOT  &mt RSHIFT FSLH
+       &kp LALT &kp LWIN  &lt SYM SPACE &mt LSHIFT ENTER                &mt RSHIFT BSPC  &mt SYM DEL      &kp INS &kp SEMI
                       &lt MOVE ESC &mt LGUI TAB           &mt RGUI TAB &lt MOVE ESC 
-					  &mo FUN  &kp TILDE          &kp TILDE &mo FUN
+					  &mo FUN      &kp TILDE              &kp TILDE    &mo FUN
 			>;
 		};
 
@@ -98,7 +103,7 @@
 &mkp MB1  &mkp MB5 &mkp MB3 &mkp &trans                                      &kp CAPS &trans &kp INS &kp TAB &trans
                    &kp GRAVE &trans &lt SYM SPACE &mt LSHIFT ENTER     &mt RSHIFT BSPC  &mt SYM DEL &trans &trans
                       &lt MOVE ESC &mt LGUI TAB           &mt RGUI TAB &lt MOVE ESC 
-					  &mo FUN  &kp TILDE          &kp TILDE &mo FUN
+					  &mo FUN  &trans          			  &trans &mo FUN
 			>;
 
 		};
@@ -131,17 +136,17 @@
 &kp SEMI &kp PRCNT &kp LBKT &kp RBKT &kp BSLSH                          &kp MINUS &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp FSLH
                    &kp GRAVE &trans   &lt SYM SPACE &mt LSHIFT ENTER     &mt RSHIFT BSPC  &mt SYM DEL &kp KP_N0 &kp DOT
                       &lt MOVE ESC &mt LGUI TAB           &mt RGUI TAB &lt MOVE ESC 
-					  &mo FUN  &kp TILDE          &kp TILDE &mo FUN
+					  &mo FUN  &trans                     &trans TILDE &mo FUN
 			>;
 		};
 
 /* FUNC - Function keys and assorted media controls
  * ,----------------------------------,                                    ,----------------------------------,
- * |  F1  |  F2  |  F3  |   F4 |      |                                    |   🔇 |  🔉  |   🔊 |      |      |
+ * |  F1  |  F2  |  F3  |   F4 |BT clr|                                    |   🔇 |  🔉  |   🔊 |      |      |
  * |------+------+------+------+------|                                    |-------------+------+------+------|
- * |   F5 |  F6  |  F7  |   F8 |      |                                    |   🖩  |  📧  |  🖳   |  🏡  |Pr.Scr|
+ * |   F5 |  F6  |  F7  |   F8 |BT Nxt|                                    |   🖩  |  📧  |  🖳   |  🏡  |Pr.Scr|
  * |------+------+------+------+------|                                    |------|------+------+------+------|
- * |   F9 |   F10| F11  |  F12 |      |                                    |  ⏮️  |  ⏯️  |  ⏭️  |      |ScrlLk|
+ * |   F9 |   F10| F11  |  F12 |BT Prv|                                    |  ⏮️  |  ⏯️  |  ⏭️  |      |ScrlLk|
  * '------+------+------+-------------,                                    ,-------------+------+------+------'
  *               |   `  | Tab  |                                                         |   -  |   ;  |
  *               '------+------'-------------'                             '-------------'------+------'
@@ -152,7 +157,7 @@
  *                                           | Esc  | Tab  | |  Tab |  Esc |
  *                                           | _MOVE|      | |      |_MOVE |
  *                                           '------+------' '------+------'
- *                                           | _FN  |  ~   | |   ~  |  _FN |
+ *                                           | _FN  |reset | | reset|  _FN |
  *                                           '------+------' '------+------'
  *
  */
@@ -160,12 +165,12 @@
 		FUNC {
 			display-name = "FUNC";
 			bindings = <
-&kp F1 &kp F2 &kp F3 &kp F4 &trans                                &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans &trans
-&kp F5 &kp F6 &kp F7 &kp F8 &trans                                &kp C_AL_CALC &kp C_AL_MAIL &kp C_AL_MAIL &kp C_MEDIA_HOME &kp PSCRN
-&kp F9 &kp F10 &kp F11 &kp F12 &trans                             &kp C_PREV &kp C_PP &kp C_NEXT &trans &SLCK
-       &kp GRAVE &kp TAB 	&lt SYM SPACE &mt LSHIFT ENTER     &mt RSHIFT BSPC  &mt SYM DEL 	&kp MINUS &kp SEMI
-	                         &lt MOVE ESC &mt LGUI TAB           &mt RGUI TAB &lt MOVE ESC 
-					  &mo FUN  &kp TILDE          &kp TILDE &mo FUN
+&kp F1 &kp F2  &kp F3  &kp F4  &bt BT_CLR                             &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &trans           &trans
+&kp F5 &kp F6  &kp F7  &kp F8  &bt BT_NXT                             &kp C_AL_CALC &kp C_AL_MAIL &kp C_AL_MAIL &kp C_MEDIA_HOME &kp PSCRN
+&kp F9 &kp F10 &kp F11 &kp F12 &bt BT_PRV                             &kp C_PREV    &kp C_PP      &kp C_NEXT                     &trans &SLCK
+       &kp GRAVE &kp TAB 	&lt SYM SPACE &mt LSHIFT ENTER    &mt RSHIFT BSPC  &mt SYM DEL 	&kp MINUS &kp SEMI
+	                        &lt MOVE ESC &mt LGUI TAB         &mt RGUI TAB &lt MOVE ESC
+					        &mo FUN  &bootloader              &bootloader &mo FUN
 			>;
 		};
 
