@@ -1,7 +1,0 @@
-config SHIELD_DM_4X5_LEFT
-    def_bool $(shields_list_contains,dm_4x5_left)
-#     select SHIELD_DM_4X5_LEFT
-
-config SHIELD_DM_4X5_RIGHT
-    def_bool $(shields_list_contains,dm_4x5_right)
-#     select SHIELD_DM_4X5_RIGHT
