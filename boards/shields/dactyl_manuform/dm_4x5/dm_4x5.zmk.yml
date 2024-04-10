@@ -1,0 +1,12 @@
+file_format: "1"
+id: dm_4x5
+Name: Dactyl Manuform 4x5
+type: shield
+url: https://github.com/abstracthat/dactyl-manuform
+requires:
+  - nice_nano_v2
+features:
+  - keys
+siblings:
+  - dm_4x5_left
+  - dm_4x5_right
