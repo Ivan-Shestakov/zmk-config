@@ -134,10 +134,10 @@
 			bindings = <
 &kp PIPE &kp EXCL &kp LBRC &kp RBRC &kp AT                              &kp PLUS &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp CARET
 &kp AMPS &kp HASH &kp LPAR &kp RPAR &kp DLLR                            &kp EQUAL &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp STAR
-&kp SEMI &kp PRCNT &kp LBKT &kp RBKT &kp BSLSH                          &kp MINUS &kp KP_N1 &kp KP_N2 &kp KP_N3 &trans
-        &kp GRAVE &trans   &lt SYM SPACE &mt LSHIFT ENTER     &mt RSHIFT BSPC  &mt SYM DEL &kp KP_N0 &kp DOT
-                      &lt MOVE ESC &mt LGUI TAB           &mt RGUI TAB &lt MOVE ESC 
-					  &mo FUNC  &trans                     &trans TILDE &mo FUNC
+&kp SEMI &kp PRCNT &kp LBKT &kp RBKT &kp BSLSH                          &kp MINUS &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp SLASH
+        &kp GRAVE &trans &lt SYM SPACE &mt LSHIFT ENTER     &mt RSHIFT BSPC  &mt SYM DEL &trans &trans
+                    &lt MOVE ESC &mt LGUI TAB               &mt RGUI TAB &lt MOVE ESC 
+					&mo FUNC  &trans          			    &trans &mo FUNC
 			>;
 		};
 	};
