@@ -72,8 +72,6 @@
                       &mo FUNC      &kp TILDE              &kp TILDE    &mo FUNC
 			>;
 		};
-	};
-};
 
 /* MOVE a movement layer inspired by Dreymar's bag of keyboard tricks (from Colemak forum), sadly mouse movements aren't in ZMK yet
  * ,----------------------------------,                                           ,----------------------------------,
@@ -96,19 +94,21 @@
  *                                           '------+------' '------+------'
  */
 
-// 		MOVE {
-// 			display-name = "MOVE";
+		MOVE {
+			display-name = "MOVE";
 
-// 			bindings = <
-// &kp PSCRN &trans &trans &trans &trans                                        &kp PG_UP &kp HOME &kp UP &kp END &kp DEL
-// &mkp MB3  &trans &trans &trans &kp LGUI                                      &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp BSPC
-// &mkp MB1  &mkp MB5 &mkp MB3 &mkp &trans                                      &kp CAPS &trans &kp INS &kp TAB &trans
-//         &kp GRAVE &trans &lt SYM SPACE &mt LSHIFT ENTER     &mt RSHIFT BSPC  &mt SYM DEL &trans &trans
-//                     &lt MOVE ESC &mt LGUI TAB           &mt RGUI TAB &lt MOVE ESC 
-// 					&mo FUNC  &trans          			  &trans &mo FUNC
-// 			>;
+			bindings = <
+&kp PSCRN &trans &trans &trans &trans                                        &kp PG_UP &kp HOME &kp UP &kp END &kp DEL
+&mkp MB3  &trans &trans &trans &kp LGUI                                      &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp BSPC
+&mkp MB1  &mkp MB5 &mkp MB3 &mkp &trans                                      &kp CAPS &trans &kp INS &kp TAB &trans
+        &kp GRAVE &trans &lt SYM SPACE &mt LSHIFT ENTER     &mt RSHIFT BSPC  &mt SYM DEL &trans &trans
+                    &lt MOVE ESC &mt LGUI TAB           &mt RGUI TAB &lt MOVE ESC 
+					&mo FUNC  &trans          			  &trans &mo FUNC
+			>;
 
-// 		};
+		};
+	};
+};
 
 // /* SYM - a symbol layer, uses pairs of various brackets on left half and NumPad numbers on right half
 //  * ,----------------------------------,                                    ,----------------------------------,
