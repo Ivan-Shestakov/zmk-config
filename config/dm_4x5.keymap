@@ -72,6 +72,8 @@
                       &mo FUNC      &kp TILDE              &kp TILDE    &mo FUNC
 			>;
 		};
+	};
+};
 
 /* MOVE a movement layer inspired by Dreymar's bag of keyboard tricks (from Colemak forum), sadly mouse movements aren't in ZMK yet
  * ,----------------------------------,                                           ,----------------------------------,
