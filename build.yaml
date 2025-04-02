@@ -22,3 +22,5 @@ include:
     shield: dm_4x5_left
   - board: nice_nano_v2
     shield: dm_4x5_right
+  - board: nice_nano_v2
+    shield: settings_reset
