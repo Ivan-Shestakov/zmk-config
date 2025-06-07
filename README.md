@@ -1,13 +1,13 @@
 ### Building keymap locally
 
 in ~/zmk run devcontainer by
-`
+```
 podman run -it --rm \                                                                                                                                                     main~/code/zmk
   --security-opt label=disable \
   --workdir /workspaces/zmk \
   -v ~/code/zmk:/workspaces/zmk \
   -v ~/code/zmk-config:/workspaces/zmk-config -p 3000:3000 zmk /bin/bash
-`
+```
 
 This starts local dev container with all build dependencies and the custom config mounted under /workspaces/zmk-config
 
