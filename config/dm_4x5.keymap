@@ -14,7 +14,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/ext_power.h>
-#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define BASE    0
 #define MOVE    1
@@ -98,12 +98,12 @@
 			display-name = "MOVE";
 
 			bindings = <
-&kp PSCRN &trans &trans &trans &trans                                        &kp PG_UP &kp HOME &kp UP &kp END &kp DEL
-&mkp MB3  &trans &trans &trans &kp LGUI                                      &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp BSPC
-&mkp MB1  &mkp MB5 &mkp MB3 &mkp &trans                                      &kp CAPS &trans &kp INS &kp TAB &trans
-        &kp GRAVE &trans &lt SYM SPACE &mt LSHIFT ENTER     &mt RSHIFT BSPC  &lt SYM DEL &trans &trans
-                    &lt MOVE ESC &mt LGUI TAB           &mt RGUI TAB &lt MOVE ESC 
-					&mo FUNC  &trans          			  &trans &mo FUNC
+&kp PSCRN &msc SCRL_UP &mmv MOVE_UP &msc SCRL_DOWN &trans                                &kp PG_UP &kp HOME &kp UP &kp END &kp DEL
+&mkp MB3  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans                           &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp BSPC
+&mkp MB1  &mkp MB5 &mkp MB2 &mkp MB3 &trans                                     &kp CAPS &trans &kp INS &kp TAB &trans
+        &kp GRAVE &trans &lt SYM SPACE &mt LSHIFT ENTER                         &mt RSHIFT BSPC  &lt SYM DEL &trans &trans
+                    &lt MOVE ESC &mt LGUI TAB                                   &mt RGUI TAB &lt MOVE ESC 
+					&mo FUNC  &trans                                            &trans &mo FUNC
 			>;
 
 		};
