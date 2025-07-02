@@ -161,7 +161,7 @@
 		FUNC {
 			display-name = "FUNC";
 			bindings = <
-&kp F1 &kp F2  &kp F3  &kp F4  &bt BT_CLR                             &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &trans           &trans
+&kp F1 &kp F2  &kp F3  &kp F4  &bt BT_CLR                             &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &bt BT_SEL 1 &bt BT_SEL 2
 &kp F5 &kp F6  &kp F7  &kp F8  &bt BT_NXT                             &kp C_AL_CALC &kp C_AL_MAIL &kp C_AL_MAIL &kp C_MEDIA_HOME &kp PSCRN
 &kp F9 &kp F10 &kp F11 &kp F12 &bt BT_PRV                             &kp C_PREV    &kp C_PP      &kp C_NEXT    &trans           &kp SLCK
        &kp GRAVE &kp TAB 	&lt SYM SPACE &mt LSHIFT ENTER    &mt RSHIFT BSPC  &lt SYM DEL 	&kp MINUS &kp SEMI
